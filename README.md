@@ -1,12 +1,12 @@
 # Economics
 
-O objetivo do repositório é compartilhar simulações feitas durante o curso de economia.
+This repository share the codes developed during economics degree.
 
-### Caracteristicas
+### Overview
 
-- Disciplinas (Pasta)
-  - Macroeconomia (Macro)
-  - Laboratório de Matemática (LabMat)
-  - Introdução à Microssimulação (Microssimulação)
+- Each subjects is separated by folders
+  - Macroeconomics (Macro)
+  - Math Lab (LabMat)
+  - Introduction to Microsimulation (Microsimulation)
   
   
