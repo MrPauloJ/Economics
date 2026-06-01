@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper, oneside, onecolumn]{article}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\setlength\parindent{1.5cm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\rhead{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\usepackage{tocloft}
+\usepackage{array}
+\usepackage{makecell}
+%\usepackage{tabularx}
+
+\usepackage[dvipsnames]{xcolor}
+
+%no hyphenization
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+
+%\usepackage{fontspec}
+%\setmainfont{Arial}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\linespread{1.5}
+
+\usepackage[colorlinks = true,
+            linkcolor = black,
+            urlcolor  = black,
+            citecolor = blue,
+            anchorcolor = yellow]{hyperref}
+
+\usepackage[alf]{abntex2cite}
+\usepackage{subfigure}
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+\usepackage{enumitem}
+\setlist{nosep}
+
+
+\begin{document}
+
+\include{Elementos/1_capa}
+\include{Elementos/2_folha_de_rosto}
+\include{Elementos/3_folha_de_aprovacao}
+%\include{Elementos/4_dedicatoria}
+\include{Elementos/5_agradecimentos}
+\include{Elementos/6_epigrafe}
+
+
+\include{Artigo/1_resumo}
+\include{Artigo/2_abstract}
+
+\include{Elementos/7_lista_de_figuras}
+\include{Elementos/8_lista_de_tabelas}
+\include{Elementos/9_lista_de_siglas}
+\include{Elementos/10_sumario}
+
+\include{Artigo/3_artigo}
+\include{Artigo/4_referencias}
+
+\bibliographystyle{abntex2-alf}
+\bibliography{Artigo/4_referencia}
+
+\include{Artigo/5_appendix}
+
+\end{document}
