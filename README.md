@@ -1,13 +1,13 @@
-# Economics
+# Undergraduate Economics
 
-This repository share the codes developed during my economics undergraduate degree.
+Code and notes developed during my B.Sc. in Economics at UFPE.  
+Topics span macroeconomics, monetary economics, and quantitative methods.
 
-### Overview
+## Contents
 
-- Each subject is separated by folders
-  - Macroeconomics
-  - Math Lab (Applied economics with ML, excel, R, Python, etc.)
-  - Introduction to Microsimulation
-  - Monetary Economics
-  
-  
+| Folder | Description |
+|---|---|
+| `Macroeconomics` | Models and exercises in macro theory |
+| `Monetary` | Monetary economics — policy, transmission, and analysis |
+| `Microsimulation` | Introduction to microsimulation methods |
+| `MathLab` | Applied economics with Python and machine learning |
