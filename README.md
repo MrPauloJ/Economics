@@ -10,4 +10,5 @@ Topics span macroeconomics, monetary economics, and quantitative methods.
 | `Macroeconomics` | Models and exercises in macro theory |
 | `Monetary` | Monetary economics — policy, transmission, and analysis |
 | `Microsimulation` | Introduction to microsimulation methods |
+| `International Finance` | Mathematical derivations and problem sets in open-economy macroeconomics. |
 | `MathLab` | Applied economics with Python and machine learning |

@@ -1,0 +1,425 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath} %lets us use \begin{proof}
+%\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+
+\title{Universidade Federal de Pernambuco \\
+Finanças Internacionais - Lista 4}
+\author{Professor: Marcelo E. A. Silva \\ Aluno: Paulo F. S. Junior}
+\date{14 de outubro de 2022}
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+\section*{Questão 1}
+Função utilidade e consumo agregados dados por:
+\begin{equation*}
+    U = \ln C_1 + \ln C_2; \>\>\>\>\>\>\>\>
+    C_t = \sqrt{C_t^T C_t^N};
+\end{equation*}
+Restrições orçamentárias dadas por:
+\begin{equation*}
+    P_1^T C_1^T + P_1^N C_1^N + P_1^T B_1 = P_1^T Q_1^T + P_1^N Q_1^N
+\end{equation*}
+\begin{equation*}
+    P_2^T C_2^T + P_2^N C_2^N  = P_2^T Q_2^T + P_2^N Q_2^N + P_2^T(1+r_1)B_1
+\end{equation*}
+Dividindo por $P_t^T$, definindo $p_t = \frac{P_t^N}{P_t^T}$, e com $r_1=r^*=0$, temos as restrições:
+\begin{equation*}
+    C_1^T + p_1 C_1^N + B_1 = Q_1^T + p_1 Q_1^N 
+\end{equation*}
+\begin{equation*}
+    C_2^T + p_2 C_2^N  = Q_2^T + p_2 Q_2^N + B_1
+\end{equation*}
+Portanto a R.O.I será:
+\begin{equation*}\label{eq:1roi}
+    C_1^T + p_1 C_1^N + C_2^T + p_2 C_2^N = Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N
+\end{equation*}
+Substituindo o consumo agregado na função utilidade, temos:
+\begin{equation*}
+    U = \ln \left[(C_1^T)^\frac{1}{2}(C_1^N)^\frac{1}{2}\right] + \ln\left[ (C_2^T)^\frac{1}{2}(C_2^N)^\frac{1}{2}\right]
+\end{equation*}
+\begin{equation*}
+    U = \frac{1}{2}\ln (C_1^T) + \frac{1}{2}\ln(C_1^N) + \frac{1}{2}\ln (C_2^T)+ \frac{1}{2}\ln (C_2^N)
+\end{equation*}
+Reescrevendo a R.O.I para $C_2^T$:
+\begin{equation*}
+    C_2^T  = 
+    Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N - p_1 C_1^N - p_2 C_2^N - C_1^T
+\end{equation*}
+E substituindo $C_2^T$ na utilidade :
+\begin{equation*}
+\begin{split}
+    U=\frac{1}{2}\ln (C_1^T) + \frac{1}{2}\ln(C_1^N)+ \frac{1}{2}\ln (C_2^N)+ \\
+    \frac{1}{2}\ln (Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N - p_1 C_1^N - p_2 C_2^N - C_1^T)
+\end{split}
+\end{equation*}
+Condição de primeira ordem para $C_1^T$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_1^T} = \frac{1}{2}\frac{1}{C_1^T}-\frac{1}{2}\frac{1}{(Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N - p_1 C_1^N - p_2 C_2^N - C_1^T)}=0
+\end{equation*}
+O denominador gigante é $C_2^T$, portanto reescrevendo:
+\begin{equation*}
+    \frac{1}{C_1^T}=\frac{1}{C_2^T} \to C_1^T=C_2^T
+\end{equation*}
+Condição de primeira ordem para $C_1^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_1^N} = \frac{1}{2}\frac{1}{C_1^N}-\frac{p_1}{2}\frac{1}{(Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N - p_1 C_1^N - p_2 C_2^N - C_1^T)}=0
+\end{equation*}
+Reescrevendo, com $C_1^T=C_2^T$ temos:
+\begin{equation*}
+    \frac{1}{C_1^N}=\frac{p_1}{C_1^T} \to C_1^N = \frac{C_1^T}{p_1}
+\end{equation*}
+Condição de primeira ordem para $C_2^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_2^N} = \frac{1}{2}\frac{1}{C_2^N}-\frac{p_2}{2}\frac{1}{(Q_1^T + p_1 Q_1^N + Q_2^T + p_2 Q_2^N - p_1 C_1^N - p_2 C_2^N - C_1^T)}=0
+\end{equation*}
+Reescrevendo, com o denominador $C_2^T$, temos:
+\begin{equation*}
+    \frac{1}{C_2^N}=\frac{p_2}{C_2^T} \to C_2^N = \frac{C_2^T}{p_2}
+\end{equation*}
+Em equilíbrio, $C_t^N=Q_t^N$, e substituindo $C_1^T$ na ROI, temos:
+\begin{equation*}
+    C_1^T = C_2^T = \frac{1}{2}(Q_1^T + Q_2^T) = \frac{1}{2}(1+2)= 1.5
+\end{equation*}
+Substituindo portanto o resultado acima para $C_1^N$ e $C_2^N$:
+\begin{equation*}
+    C_1^N = \frac{1}{2p_1}(Q_1^T+Q_2^T) \to p_1=\frac{1}{2C_1^N}(Q_1^T+Q_2^T)
+\end{equation*}
+\begin{equation*}
+    C_2^N = \frac{1}{2p_2}(Q_1^T+Q_2^T) \to p_2=\frac{1}{2C_2^N}(Q_1^T+Q_2^T)
+\end{equation*}
+Em equilíbrio $C_t^N=Q_t^N$, portanto teremos os preços:
+\begin{equation*}
+    p_1=\frac{1}{2Q_1^N}(Q_1^T+Q_2^T) = \frac{1}{2*4}(1+2)=0.375
+\end{equation*}
+\begin{equation*}
+    p_2=\frac{1}{2Q_2^N}(Q_1^T+Q_2^T) = \frac{1}{2*3}(1+2)=0.5
+\end{equation*}
+A balança comercial para os períodos 1 e 2 são respectivamente:
+\begin{equation*}
+    TB_1=Q_1^T-C_1^T = 1 - 1.5 = -0.5
+\end{equation*}
+\begin{equation*}
+    TB_2=Q_2^T-C_2^T = 2 - 1.5 = 0.5
+\end{equation*}
+
+\section*{Questão 2}
+Função utilidade dada por:
+\begin{equation*}
+    U = \ln C_1^T + \ln C_1^N + \ln C_2^T + \ln C_2^N
+\end{equation*}
+Podemos derivar a restrição orçamentária intertemporal como:
+\begin{equation*}
+    P_1^T C_1^T + P_1^N C_1^N + P_1^T B_1 = P_1^T Q_1^T + P_1^N Q_1^N
+\end{equation*}
+\begin{equation*}
+    P_2^T C_2^T + P_2^N C_2^N = P_2^T Q_2^T + P_2^N Q_2^N + (1+r_1)P_2^T B_1
+\end{equation*}
+Dividindo por $P_t^T$, com $p_t=\frac{P_t^N}{P_t^T}$ e livre mobilidade de capital, $r^*=r_1$, temos:
+\begin{equation*}
+    C_1^T + p_1 C_1^N + B_1 = Q_1^T + p_1 Q_1^N
+\end{equation*}
+\begin{equation*}
+   C_2^T + p_2 C_2^N = Q_2^T + p_2 Q_2^N + (1+r^*) B_1
+\end{equation*}
+Isolando portanto $B_1$ da RO em $t=2$:
+\begin{equation*}
+   B_1 = \frac{1}{(1+r^*)}(C_2^T + p_2 C_2^N - Q_2^T - p_2 Q_2^N)
+\end{equation*}
+Substituindo na RO em $t=1$, encontramos a ROI:
+\begin{equation*}
+    C_1^T + p_1 C_1^N + \frac{C_2^T + p_2 C_2^N}{(1+r^*)}= Q_1^T + p_1 Q_1^N + \frac{Q_2^T + p_2 Q_2^N}{(1+r^*)}
+\end{equation*}
+Isolando $C_2^T$ da ROI e substituindo na função utilidade:
+\begin{equation*}
+     C_2^T = (1+r^*)\left[Q_1^T + p_1 Q_1^N- p_1 C_1^N-C_1^T \right] + Q_2^T + p_2 Q_2^N- p_2 C_2^N
+\end{equation*}
+\begin{equation*}
+    U = \ln C_1^T + \ln C_1^N + \ln \left[(1+r^*)\left[Q_1^T + p_1 Q_1^N- p_1 C_1^N-C_1^T \right] + Q_2^T + p_2 Q_2^N- p_2 C_2^N\right] + \ln C_2^N
+\end{equation*}
+Realizando condição de primeira ordem para $C_1^T$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_1^T}=\frac{1}{C_1^T}-\frac{(1+r^*)}{\left[(1+r^*)\left[Q_1^T + p_1 Q_1^N- p_1 C_1^N-C_1^T \right] + Q_2^T + p_2 Q_2^N- p_2 C_2^N\right]}=0
+\end{equation*}
+Podemos reorganizar como:
+\begin{equation*}
+    \frac{1}{C_1^T}=\frac{(1+r*)}{C_2^T} \to C_2^T = (1+r^*)C_1^T
+\end{equation*}
+Realizando condição de primeira ordem para $C_1^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_1^N}=\frac{1}{C_1^N}-\frac{p_1(1+r^*)}{\left[(1+r^*)\left[Q_1^T + p_1 Q_1^N- p_1 C_1^N-C_1^T \right] + Q_2^T + p_2 Q_2^N- p_2 C_2^N\right]}=0
+\end{equation*}
+Podemos reorganizar como:
+\begin{equation*}
+    \frac{1}{C_1^N}=\frac{p_1(1+r*)}{C_2^T} \to C_2^T = p_1(1+r^*)C_1^N
+\end{equation*}
+Igualando a equação acima com $C_2^T=(1+r^*)C_1^T$:
+\begin{equation*}
+    p_1(1+r^*)C_1^N=(1+r^*)C_1^T \to C_1^N = \frac{1}{p_1}C_1^T
+\end{equation*}
+Realizando condição de primeira ordem para $C_2^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_2^N}=\frac{1}{C_2^N}-\frac{p_2}{\left[(1+r^*)\left[Q_1^T + p_1 Q_1^N- p_1 C_1^N-C_1^T \right] + Q_2^T + p_2 Q_2^N- p_2 C_2^N\right]}=0
+\end{equation*}
+Podemos reorganizar como:
+\begin{equation*}
+    \frac{1}{C_2^N}=\frac{p_2}{C_2^T} \to C_2^N = \frac{C_2^T}{p_2}
+\end{equation*}
+Substituindo $C_2^T=(1+r^*)C_1^T$ na ROI, com $Q_t^N=C_t^N$ (em equilíbrio), teremos:
+\begin{equation*}
+     (1+r^*)C_1^T = (1+r^*)\left[Q_1^T-C_1^T \right] + Q_2^T
+\end{equation*}
+\begin{equation*}
+     C_1^T = \frac{1}{2}\left[Q_1^T  + \frac{Q_2^T}{(1+r^*)}\right]
+\end{equation*}
+\begin{equation*}
+     C_2^T = \frac{(1+r*)}{2}\left[Q_1^T  + \frac{Q_2^T}{(1+r^*)}\right]
+\end{equation*}
+Portanto com $Q_t^N=C_t^N$ (em equilíbrio), teremos os preços:
+\begin{equation*}
+    C_1^N = \frac{1}{p_1}C_1^T \to p_1 = \frac{C_1^T}{Q_1^N}
+\end{equation*}
+\begin{equation*}
+    C_2^N = \frac{C_2^T}{p_2} \to p_2 = \frac{C_2^T}{Q_2^N}
+\end{equation*}
+\newpage
+\subsection*{Ponto i)}
+Como as famílias iniciam o período 1 sem ativos ou dívidas, a conta corrente será igual a balança comercial ($CA=TB$), assim, resgatando as equações anteriores teremos que a conta corrente será, com r*=0:
+\begin{equation*}
+    CA_1=TB_1=Q_1^T-C_1^T=Q_1^T - \frac{1}{2}\left[Q_1^T  + \frac{Q_2^T}{(1+r^*)}\right] = 1 - \frac{3}{2}=-0.5
+\end{equation*}
+Dessa forma, teremos que:
+\begin{equation*}
+    p_1 = \frac{C_1^T}{Q_1^N} = \frac{1.5}{1} = 1.5
+\end{equation*}
+
+\subsection*{Pronto ii)}
+Com o aumento súbito da taxa de juros, teremos que:
+\begin{equation*}
+    CA_1=Q_1^T - \frac{1}{2}\left[Q_1^T  + \frac{Q_2^T}{(1+r^*)}\right] = 1 - \frac{1}{2}\left[1+\frac{2}{1.1}\right]=1-1,40=-0,40
+\end{equation*}
+Dessa forma, teremos que:
+\begin{equation*}
+    p_1 = \frac{C_1^T}{Q_1^N} = \frac{1.40}{1} = 1.40
+\end{equation*}
+\section*{Questão 3}
+\subsection*{Ponto i)}
+Restrição orçamentária em $t=1$:
+\begin{equation*}
+    P_1^T C_1^T + P_1^N C_1^N + P_1^T B_1 = P_1^T Q_1^T + P_1^N Q_1^N
+\end{equation*}
+Restrição orçamentária em $t=2$, com livre mobilidade de capitais, $r_1=r^*$:
+\begin{equation*}
+    P_2^T C_2^T + P_2^N C_2^N = P_2^T Q_2^T + P_2^N Q_2^N + (1+r^*)P_2^T B_1
+\end{equation*}
+Dividindo as equações acima por $P_t^T$, com $p_t=\frac{P_t^N}{P_t^T}$:
+\begin{equation*}
+    RO_1: C_1^T + p_1 C_1^N + B_1 = Q_1^T + p_1 Q_1^N
+\end{equation*}
+\begin{equation*}
+    RO_2: C_2^T + p_2 C_2^N = Q_2^T + p_2 Q_2^N + (1+r^*)B_1
+\end{equation*}
+Isolando $B_1$ de $RO_2$ e substituindo em $RO_1$:
+\begin{equation*}
+    B_1 = \frac{C_2^T + p_2 C_2^N - Q_2^T - p_2 Q_2^N}{(1+r^*)}
+\end{equation*}
+\begin{equation*}
+     C_1^T + p_1 C_1^N + \frac{C_2^T + p_2 C_2^N - Q_2^T - p_2 Q_2^N}{(1+r^*)} = Q_1^T + p_1 Q_1^N
+\end{equation*}
+Restrição Orçamentária Intertemporal (R.O.I):
+\begin{equation}\label{eq:roi}
+     C_1^T + p_1 C_1^N + \frac{C_2^T + p_2 C_2^N}{(1+r^*)} = Q_1^T + p_1 Q_1^N + \frac{Q_2^T + p_2 Q_2^N}{(1+r^*)}
+\end{equation}
+\subsection*{Ponto ii)}
+Isolando $C_1^T$ da ROI:
+\begin{equation*}
+     C_1^T = Q_1^T + p_1 Q_1^N-p_1 C_1^N + \frac{Q_2^T + p_2 Q_2^N- C_2^T - p_2 C_2^N}{(1+r^*)}
+\end{equation*}
+Substituindo $C_1^T$ na função utilidade:
+\begin{equation*}
+    \ln \left[Q_1^T + p_1 Q_1^N-p_1 C_1^N + \frac{Q_2^T + p_2 Q_2^N- C_2^T - p_2 C_2^N}{(1+r^*)}\right] + \ln C_1^N + \ln C_2^T + \ln C_2^N
+\end{equation*}
+Realizando condição de primeira ordem em relação a $C_1^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_1^N} =
+    -\frac{p_1}{\left[Q_1^T + p_1 Q_1^N-p_1 C_1^N + \frac{Q_2^T + p_2 Q_2^N- C_2^T - p_2 C_2^N}{(1+r^*)}\right]}+\frac{1}{C_1^N}=0
+\end{equation*}
+\begin{equation}\label{eq:cn1}
+    \frac{1}{C_1^N}=\frac{p_1}{C_1^T} \to C_1^N=\frac{C_1^T}{p_1}
+\end{equation}
+Realizando condição de primeira ordem em relação a $C_2^T$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_2^T} =
+    -\frac{\frac{1}{(1+r^*)}}{\left[Q_1^T + p_1 Q_1^N-p_1 C_1^N + \frac{Q_2^T + p_2 Q_2^N- C_2^T - p_2 C_2^N}{(1+r^*)}\right]}+\frac{1}{C_2^T}=0
+\end{equation*}
+\begin{equation}\label{eq:c2teqc1t}
+    \frac{1}{C_2^T}=\frac{1}{(1+r^*)C_1^T} \to C_2^T=(1+r^*)C_1^T
+\end{equation}
+Realizando condição de primeira ordem em relação a $C_2^N$:
+\begin{equation*}
+    \frac{\partial U}{\partial C_2^N} =
+    -\frac{\frac{p_2}{(1+r^*)}}{\left[Q_1^T + p_1 Q_1^N-p_1 C_1^N + \frac{Q_2^T + p_2 Q_2^N- C_2^T - p_2 C_2^N}{(1+r^*)}\right]}+\frac{1}{C_2^N}=0
+\end{equation*}
+\begin{equation}\label{eq:cn2}
+    \frac{1}{C_2^N}=\frac{p_2}{(1+r^*)C_1^T} \to C_2^N=\frac{1}{p_2}(1+r^*)C_1^T
+\end{equation}
+\subsection*{Ponto iii)}
+A condição de equilíbrio do mercado de bens não comercializáveis em t=1,2 é:
+\begin{equation}\label{eq:cond1}
+    C_1^N=Q_1^N
+\end{equation}
+\begin{equation}\label{eq:cond2}
+    C_2^N=Q_2^N
+\end{equation}
+\subsection*{Ponto iv)}
+Substituindo \eqref{eq:c2teqc1t}, \eqref{eq:cond1} e \eqref{eq:cond2} na ROI \eqref{eq:roi}:
+\begin{equation*}
+    C_1^T + \frac{(1+r^*)C_1^T}{(1+r^*)} = Q_1^T + \frac{Q_2^T}{(1+r^*)}
+\end{equation*}
+\begin{equation*}
+    2C_1^T = Q_1^T + \frac{Q_2^T}{(1+r^*)}
+\end{equation*}
+\begin{equation*}
+    C_1^T = \frac{1}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right] = 
+    \frac{1}{2}\left[6 + \frac{13.2}{(1+0.1)}\right] = 9
+\end{equation*}
+Como por \eqref{eq:c2teqc1t} $C_2^T=(1+r*)C_1^T$, temos que:
+\begin{equation*}
+    C_2^T = \frac{(1+r^*)}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right] = \frac{(1+0.1)}{2}\left[6 + \frac{13.2}{(1+0.1)}\right] = 9.9 
+\end{equation*}
+Para $C_1^N$ por \eqref{eq:cn1}, temos:
+\begin{equation*}
+    C_1^N=\frac{1}{2p_1}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=9
+\end{equation*}
+Para $C_2^N$ por \eqref{eq:cn2}, temos:
+\begin{equation*}
+    C_2^N=\frac{(1+r^*)}{2p_2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=9
+\end{equation*}
+Utilizando as duas últimas equações acimas, e as condições de equilíbrio \eqref{eq:cond1} e \eqref{eq:cond2} achamos os respectivos preços relativos:
+\begin{equation*}
+    p_1=\frac{1}{2Q_1^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=
+    \frac{1}{2*9}\left[6 + \frac{13.2}{(1+0.1)}\right]=1
+\end{equation*}
+\begin{equation*}
+    p_2=\frac{(1+r^*)}{2Q_2^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=
+    \frac{(1+0.1)}{2*9}\left[6 + \frac{13.2}{(1+0.1)}\right]=1.1
+\end{equation*}
+Apesar da mesma quantidade de riqueza de bens não negociáveis nos diferentes períodos de tempo, a variação dos preços é explicada devido a taxa de juros.
+\subsection*{Ponto v)}
+Durante a derivação da ROI \eqref{eq:roi} encontramos que:
+\begin{equation*}
+    B_1 = \frac{C_2^T + p_2 C_2^N - Q_2^T - p_2 Q_2^N}{(1+r^*)}
+\end{equation*}
+\begin{equation*}
+    B_1 = \frac{9.9 + 1.1* 9 - 13.2 - 1.1* 9}{(1.1)}=-3
+\end{equation*}
+\subsection*{Ponto vi)}
+Como as famílias iniciam ($t=0$) sem ativo/passivo, a conta corrente será igual a balança comercial e portanto igual ao passivo externo (t=1):
+\begin{equation*}
+    CA_1=TB_1=B_1=Q_1^T-C_1^T=Q_1^T-\frac{1}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=6-9=-3
+\end{equation*}
+Para o segundo período teremos:
+\begin{equation*}
+    CA_2=r^*B_1+Q_2^T-\frac{(1+r^*)}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]=-0.3+13.2-9.9=3
+\end{equation*}
+\subsection*{Ponto vii)}
+A taxa real de câmbio é definida como:
+$$e_t=\frac{\varepsilon_t P_t^*}{P_t}$$
+E os preços nominais no país doméstico e estrangeiro são respectivamente:
+\begin{equation*}
+    P_t=\sqrt{P_t^{T} P_t^{N}}; \>\>\>\>\>\> \textit{e} \>\>\>\>\>\> P_t^*=\sqrt{P_t^{T*} P_t^{N*}}; 
+\end{equation*}
+Podemos então reescrever a RER (Real exchange Rate) como:
+\begin{equation*}
+    e_t= \frac{\varepsilon_t \sqrt{P_t^{T*} P_t^{N*}}}{\sqrt{P_t^{T} P_t^{N}}} \to e_t= \frac{\varepsilon_t \left(P_t^{T*} P_t^{N*}\right)^\frac{1}{2}}{\left(P_t^{T} P_t^{N}\right)^\frac{1}{2}}
+\end{equation*}
+Com homogeneidade de grau um e PPP satisfeita para $P_t^T$, ($\varepsilon \frac{P_t^{T*}}{P_t^T}=1$):
+\begin{equation*}
+    e_t= \frac{\varepsilon_t (P_t^{T*})^\frac{1}{2} (P_t^{N*})^\frac{1}{2}}{(P_t^{T})^\frac{1}{2} (P_t^{N})^\frac{1}{2}} \to e_t= \frac{\varepsilon_t P_t^{T*}}{P_t^T}\frac{\left(\frac{P_t^{T*}}{ P_t^{T*}}\right)^\frac{1}{2} \left(\frac{P_t^{N*}}{P_t^{T*}}\right)^\frac{1}{2}}{\left(\frac{P_t^{T}}{P_t^T}\right)^\frac{1}{2} \left(\frac{P_t^{N}}{P_t^T}\right)^\frac{1}{2}}
+\end{equation*}
+Das letras anteriores, sabemos que $p_t=\frac{P_t^N}{P_t^T}$ para ambos os países, e portanto:
+\begin{equation*}
+    e_t= \left(\frac{\frac{P_t^{N*}}{P_t^{T*}}}{\frac{P_t^{N}}{P_t^T}}\right)^\frac{1}{2} \to
+    e_t= \left(\frac{p_t^*}{p_t}\right)^\frac{1}{2}
+\end{equation*}
+Para os dois períodos, teremos as seguintes RER:
+\begin{equation*}
+    e_1= \left(\frac{p_1^*}{\frac{1}{2Q_1^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]}\right)^\frac{1}{2} = \left(\frac{P_1^*}{1}\right)^\frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    e_2= \left(\frac{p_2^*}{\frac{(1+r^*)}{2Q_2^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]}\right)^\frac{1}{2} = \left(\frac{P_2^*}{1}\right)^\frac{1.1}{2}
+\end{equation*}
+\subsection*{Ponto viii)}
+A parada abrupta é modelada através de um repentino grande aumento da taxa de juros chamado de $r^S$ onde $r^S>r^*$, dessa forma recuperando as otimizações anteriores e comparando antes e depois da parada abrupta.\\
+\begin{equation*}
+    \tilde{B_1}=Q_1^T-C_1^T=\frac{1}{2}\left[Q_1^T - \frac{Q_2^T}{(1+r^S)}\right] > B_1 =\frac{1}{2}\left[Q_1^T - \frac{Q_2^T}{(1+r^*)}\right]
+\end{equation*}
+A maior taxa de juros $r^S$ melhora da posição de ativos internacionais líquidos.
+\begin{equation*}
+    \tilde{CA_1}=\tilde{B_1}=Q_1^T-C_1^T=\frac{1}{2}\left[Q_1^T - \frac{Q_2^T}{(1+r^S)}\right] > CA_1=B_1=Q_1^T-C_1^T=\frac{1}{2}\left[Q_1^T - \frac{Q_2^T}{(1+r^*)}\right]
+\end{equation*}
+A maior taxa de juros $r^S$ melhora a conta corrente no primeiro período.
+\begin{equation*}
+    \tilde{CA_2}=r^S\tilde{B_1}+Q_2^T-\frac{(1+r^S)}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^S)}\right] > CA_2=r^*B_1+Q_2^T-\frac{(1+r^*)}{2}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]
+\end{equation*}
+A maior taxa de juros $r^S$ melhora a conta corrente no segundo período.
+\begin{equation*}
+    e_1^S= \left(\frac{p_1^*}{\frac{1}{2Q_1^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^S)}\right]}\right)^\frac{1}{2} > e_1= \left(\frac{p_1^*}{\frac{1}{2Q_1^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]}\right)^\frac{1}{2}
+\end{equation*}
+O aumento da taxa de juros reduz o preço doméstico relativo $p_1$ que leva ao aumento da taxa de câmbio real pela depreciação da moeda nacional em $t=1$. 
+\begin{equation*}
+    e_2^S= \left(\frac{p_2^S}{\frac{(1+r^S)}{2Q_2^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^S)}\right]}\right)^\frac{1}{2} < e_2= \left(\frac{p_2^*}{\frac{(1+r^*)}{2Q_2^N}\left[Q_1^T + \frac{Q_2^T}{(1+r^*)}\right]}\right)^\frac{1}{2}
+\end{equation*}
+O aumento da taxa de juros aumenta o preço doméstico relativo $p_2$ que leva a queda da taxa de câmbio real pela apreciação da moeda nacional em $t=2$. 
+\section*{Questão 4}
+Montando a função lucro para os dois setores no país i, com i=\{US, J\}, já que algebricamente temos as mesmas expressões na função de produção:
+\begin{equation*}
+    \pi_T^{i} = P_T^{i} a_T^{i}L^{T,i}-wL^{T,i} = 0
+\end{equation*}
+\begin{equation*}
+    \pi_N^{i} = P_N^{i} a_N^{i}L^{N,i}-wL^{N,i} = 0
+\end{equation*}
+Dividindo as equações acima respectivamente por $L^{T,i}$ e $L^{N,i}$:
+\begin{equation*}
+    P_T^{i} a_T^{i}=w ; \>\>\>\> e \>\>\>\> P_N^{i} a_N^{i}=w
+\end{equation*}
+Igualando $w$ e isolando os preços relativos:
+\begin{equation*}
+    P_T^{i} a_T^{i}=P_N^{i} a_N^{i} \to 
+    \frac{P_N^{i}}{P_T^{i}}=\frac{a_T^{i}}{a_N^{i}}
+\end{equation*}
+\subsection*{Ponto i)}
+Portanto a taxa real de câmbio ($e=\frac{\varepsilon P^J}{P^{US}}$) entre os países é:
+\begin{equation*}
+    e=\frac{\varepsilon_t (P_T^{J})^\frac{1}{2}(P_N^J)^\frac{1}{2}}{(P_T^{US})^\frac{1}{2}(P_N^{US})^\frac{1}{2}} \to 
+    e= \frac{\varepsilon_t P_T^J}{P_T^{US}}\frac{ \left(\frac{P_T^{J}}{P_T^J}\right)^\frac{1}{2}\left(\frac{P_N^J}{P_T^J}\right)^\frac{1}{2}}{\left(\frac{P_T^{US}}{P_T^{US}}\right)^\frac{1}{2}\left(\frac{P_N^{US}}{P_T^{US}}\right)^\frac{1}{2}}
+\end{equation*}
+Considerando $\frac{\varepsilon_t P_T^J}{P_T^{US}}=1$, e das equações acimas, teremos que:
+\begin{equation*}
+    e= \frac{\left(\frac{P_N^J}{P_T^J}\right)^\frac{1}{2}}{\left(\frac{P_N^{US}}{P_T^{US}}\right)^\frac{1}{2}} \to 
+    e=\frac{\left(\frac{a_T^J}{a_N^J}\right)^\frac{1}{2}}{\left(\frac{a_T^{US}}{a_N^{US}}\right)^\frac{1}{2}} \to 
+    e=\frac{\left(\frac{0.2}{0.2}\right)^\frac{1}{2}}{\left(\frac{0.4}{0.1}\right)^\frac{1}{2}}=\frac{1}{2}
+\end{equation*}
+\subsection*{Ponto ii)}
+Com a produtividade constante entre os setores do Japão, porém crescimento de 3\% e 1\% respectivamente para os setores de comercializáveis e não comercializáveis dos EUA, temos que a taxa de crescimento RER será:
+\begin{equation*}
+    e=\left[\frac{\left(\frac{a_T^J}{a_N^J}\right)}{\left(\frac{(1.03)a_T^{US}}{(1.01)a_N^{US}}\right)}\right]^\frac{1}{2} \to 
+    e=\left[\frac{\left(\frac{0.2}{0.2}\right)}{\left((1.02)\frac{a_T^{US}}{a_N^{US}}\right)}\right]^\frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    e=\left[\frac{(0.98)a_N^{US}}{a_T^{US}}\right]^\frac{1}{2} \to 
+    e=\left[\frac{(0.98)0.1}{0.4}\right]^\frac{1}{2}=0,245
+\end{equation*}
+Na medida que a produtividade do japão permanece inalterada, mas a produtividade relativa dos EUA aumenta, o preço relativo ($\frac{P_N^{S}}{P_T^{US}}$) cai, logo se espera uma desvalorização da moeda dos EUA o que fará o câmbio real apreciar.
+
+
+\end{document}

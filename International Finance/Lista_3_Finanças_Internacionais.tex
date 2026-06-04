@@ -1,0 +1,380 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath} %lets us use \begin{proof}
+%\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+
+\title{Universidade Federal de Pernambuco \\
+Finanças Internacionais - Lista 3}
+\author{Professor: Marcelo E. A. Silva \\ Aluno: Paulo F. S. Junior}
+\date{14 de outubro de 2022}
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+\section*{Questão 1}
+
+\subsection*{Derivações}
+Dado que os países têm preferências e restrições orçamentárias idênticas (em estrutura/forma), portanto resolvemos para o país i, onde $i=\{U, E\}$.
+\\\\
+Preferências das famílias e restrições (sob livre mobilidade de capital) são:
+   $$U^{i}=\ln C_1^i + \ln C_2^i$$
+   $$C_1^{i}+B_1^{i}=Q_1^{i}$$
+   $$C_2^{i}=(1+r^*)B_1^{i}+Q_1^{i}$$
+   $$C_1^{i}+\frac{C_2^{i}}{(1+r^*)}=Q_1^{i}+\frac{Q_2^{i}}{(1+r^*)}$$
+\\
+Reescrevendo a R.O.I em termos de $C_2^{i}$ e substituindo na função utilidade temos o problema das famílias dado como se segue (maximização não condicionada):
+\begin{equation}
+    \ln C_1^i + \ln[(1+r^*)(Q_1^{i}-C_1^{i})+Q_2^{i}]
+\end{equation}
+Realizando a condição de primeira ordem para consumo do primeiro período:
+\begin{equation}
+    \frac{\partial U^{i}}{\partial C_1^{i}} = \frac{1}{C_1^{i}}-\frac{(1+r^*)}{[(1+r^*)(Q_1^{i}-C_1^{i})+Q_2^{i}]} = 0
+\end{equation}
+Resolvendo para $C_1^{i}:$
+\begin{equation}
+    \frac{1}{C_1^{i}}=\frac{(1+r^*)}{[(1+r^*)(Q_1^{i}-C_1^{i})+Q_2^{i}]}
+\end{equation}
+\begin{equation}
+    (1+r^*)(Q_1^{i}-C_1^{i})+Q_2^{i}=C_1^{i}(1+r^*)
+\end{equation}
+\begin{equation}
+    (1+r^*)Q_1^{i}+Q_2^{i}=C_1^{i}2(1+r^*)
+\end{equation}
+\begin{equation}
+    C_1^{i}=\frac{1}{2}\left[Q_1^{i}+\frac{Q_2^{i}}{(1+r^*)}\right]
+\end{equation}
+Em uma economia de dotação a conta corrente do país i será dada por:
+\begin{equation}
+    CA_1^{i}=Q_1^{i}-C_1^{i}
+\end{equation}
+e portanto, no ótimo:
+\begin{equation}\label{eq:CAi}
+    CA_1^{i}=\frac{1}{2}\left[Q_1^{i}-\frac{Q_2^{i}}{(1+r^*)}\right]
+\end{equation}
+A conta corrente "mundial" é definida como:
+\begin{equation}
+    CA^U+CA^E=0
+\end{equation}
+Portanto, no ótimo em $t=1$ temos:
+\begin{equation}
+    \frac{1}{2}\left[Q_1^{U}-\frac{Q_2^{U}}{(1+r^*)}\right] + 
+    \frac{1}{2}\left[Q_1^{E}-\frac{Q_2^{E}}{(1+r^*)}\right]=0
+\end{equation}
+Isolando $r^*$ encontramos a taxa de juros mundial de equilíbrio:
+\begin{equation}
+    \frac{1}{2}\left[Q_1^{U}-\frac{Q_2^{U}}{(1+r^*)}\right] + 
+    \frac{1}{2}\left[Q_1^{E}-\frac{Q_2^{E}}{(1+r^*)}\right]=0 *(2)
+\end{equation}
+\begin{equation}
+    Q_1^{U} + Q_1^{E}=\frac{Q_2^{E}+Q_2^{U}}{(1+r^*)}
+\end{equation}
+\begin{equation}
+    (1+r^*)=\frac{Q_2^{E}+Q_2^{U}}{Q_1^{U} + Q_1^{E}}
+\end{equation}
+\begin{equation}\label{eq:r*equilibrio}
+    r^*=\frac{Q_2^{E}+Q_2^{U}}{Q_1^{U} + Q_1^{E}}-1
+\end{equation}
+%Portanto, em equilíbrio, as contas correntes seriam dadas por:
+
+
+\subsection*{Letra A)}
+Com dotações $Q_1^U=Q_2^U=Q_1^E=Q_2^E=10$, e da derivação feita temos que:\\
+A taxa de juros de equilíbrio \eqref{eq:r*equilibrio} será:
+\begin{equation}
+    r^*=\frac{10+10}{10+10}-1=0
+\end{equation}
+Utilizando a taxa de juros de equilíbrio encontrada acima, a conta corrente \eqref{eq:CAi} em equilíbrio dos países será de:
+\begin{equation}
+    CA_1^{E}=CA_1^{U}=\frac{1}{2}\left[Q_1^{i}-\frac{Q_2^{i}}{(1+r^*)}\right]
+\end{equation}
+\begin{equation}
+    CA_1^{E}=CA_1^{U}=\frac{1}{2}\left[10-\frac{10}{(1+0)}\right]=0
+\end{equation}
+\subsection*{Letra B)}
+Com a contração temporária nos EUA, $Q_1^{U}=8$, mas, $Q_2^U=Q_1^E=Q_2^E=10$,\\
+A taxa de juros mundial de equilíbrio \eqref{eq:r*equilibrio} se ajustará para:
+\begin{equation}
+    r^*=\frac{10+10}{8 + 10}-1 = 0.11111111
+\end{equation}
+A conta corrente \eqref{eq:CAi} em equilíbrio dos EUA será de:
+\begin{equation}
+    CA_1^{U}=\frac{1}{2}\left[8-\frac{10}{(1+0,11111111)}\right] = \frac{1}{2}\left[8-9\right] = - 0.5
+\end{equation}
+A conta corrente \eqref{eq:CAi} em equilíbrio da Europa será de:
+\begin{equation}
+    CA_1^{E}=\frac{1}{2}\left[10-\frac{10}{(1+0,11111111)}\right] = \frac{1}{2}\left[10-9\right] = + 0.5
+\end{equation}
+Intuição:
+A queda na dotação das famílias estado-unidenses no período um leva a antecipação do consumo (como forma de suavização), ou seja, trazem renda do futuro para o presente, o que portanto eleva a demanda por fundos no mercado mundial, o excesso de fundos então é eliminado através do aumento da taxa de juros mundial induzindo o mercado ao equilíbrio pois uma maior taxa de juros incetiva os europeus a pouparem mais hoje para consumir no futuro.
+
+\subsection*{Letra C)}
+Com a contração nos EUA, $Q_1^{U}=8$ e $Q_2^{U}=6$, mas, $Q_1^E=Q_2^E=10$,\\
+A taxa de juros mundial de equilíbrio \eqref{eq:r*equilibrio} se ajustará para:
+\begin{equation}
+    r^*=\frac{10+6}{8 + 10}-1 = -0.11111111
+\end{equation}
+A conta corrente \eqref{eq:CAi} em equilíbrio dos EUA será de:
+\begin{equation}
+    CA_1^{U}=\frac{1}{2}\left[8-\frac{6}{(1-0,11111111)}\right] = \frac{1}{2}\left[8-6.75\right] = 0.625
+\end{equation}
+A conta corrente \eqref{eq:CAi} em equilíbrio da Europa será de:
+\begin{equation}
+    CA_1^{E}=\frac{1}{2}\left[10-\frac{10}{(1-0,11111111)}\right] = \frac{1}{2}\left[10-11.25\right] = -0.625
+\end{equation}
+Intuição:
+Ne letra B a queda na dotação era temporária, embora caísse em um período, no outro a dotação se elevaria, por conseguinte a abundancia futura mundial seria maior que a corrente e portanto explica a elevação da taxa de juros mundial.
+Na letra C, com a contração esperada no período dois sendo pior que o período um as famílias, estado-unidenses irão suavizar consumo poupando parte da sua dotação que portanto eleva a oferta de fundos no mercado mundial, o excesso de oferta portanto é eliminado através da redução de juros mundial (para um nível negativo visto que a dotação do segundo período é menor que a do primeiro), com a taxa de juros negativa os europeus têm incentivos para consumir mais hoje do que sua dotação corrente. 
+
+\subsection*{Letra D)}
+Com base no modelo acima podemos argumentar que as perspectivas futuras eram negativas e demoradas, ou seja, as dotações futuras seriam menores do que as dotações correntes durante algum período (relativamente longo) de tempo o que leva a queda da taxa de juros mundial, dessa forma os indivíduos buscavam liquidez.
+
+\section*{Questão 2}
+\subsection*{Letra A)}
+Com dotações $Q_1^{U}=Q_1^{E}=8$ e $Q_2^U=Q_2^E=10$, teremos a taxa de juros mundial de equilíbrio \eqref{eq:r*equilibrio} de:
+\begin{equation}
+    r^*=\frac{10+10}{8 + 8}-1 = 0,25
+\end{equation}
+\subsection*{Letra B)}
+Com dotações $Q_1^{U}=Q_1^{E}=Q_2^U=Q_2^E=8$, teremos a taxa de juros mundial de equilíbrio \eqref{eq:r*equilibrio} de:
+\begin{equation}
+    r^*=\frac{8+8}{8 + 8}-1 = 0
+\end{equation}
+\subsection*{Letra C)}
+Com dotações $Q_1^{U}=Q_1^{E}=8$, mas, $Q_2^U=Q_2^E=6$, teremos a taxa de juros mundial de equilíbrio \eqref{eq:r*equilibrio} de:
+\begin{equation}
+    r^*=\frac{6+6}{8 + 8}-1 = -0,25
+\end{equation}
+\subsection*{Letra D)}
+(Uma análise bem simples [serei demitido?!])\\
+A equipe apresentou três cenários prováveis:
+\begin{itemize}
+    \item Cenário A\\
+    Há uma contração do produto corrente porém a economia volta ao "normal" no período dois, com isso a taxa de juros é esperada subir.
+    \item Cenário B\\
+    Há uma contração do produto corrente e futuro de mesma proporção, dessa forma é esperado que a taxa de juros seja 0.
+    \item Cenário C\\
+    Há uma contração do produto nos dois períodos de tempo, porém, a queda do período futuro é maior do que a do período corrente, e portanto é esperada que a taxa de juros caia (para um nível negativo).
+\end{itemize}
+Pode-se levar em consideração os 3 casos e portando determinar uma possível expectativa com as três possibilidades possíveis apresentada pela equipe:
+\begin{equation}
+    E(r^*)=\frac{1}{3}\left[0,25+0-0,25\right]=0
+\end{equation}
+Entre pessimismo e otimismo, o cenário C, seria o cenário mais razoável.
+
+\section*{Questão 3}
+\subsection*{Ponto i)}
+As famílias estado-unidenses tem preferências e restrições dadas por:
+    $$U^{U}=\ln C_1^U + \beta\ln C_2^U$$
+   $$C_1^{U}+B_1^{U}=Q_1^{U}$$
+   $$C_2^{U}=(1+r_1^U)B_1^{U}+Q_1^{U}$$
+   $$C_1^{U}+\frac{C_2^{U}}{(1+r_1^U)}=Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}$$
+O problema da família portanto se resume em:
+\begin{equation}
+    Max L = \ln C_1^U + \beta\ln C_2^U-\lambda\left[C_1^{U}+\frac{C_2^{U}}{(1+r_1^U)}-Q_1^{U}-\frac{Q_2^{U}}{(1+r_1^U)}\right]
+\end{equation}
+Condições de primeira ordem:
+\begin{equation}
+    \frac{\partial L}{\partial C_1^U} = \frac{1}{C_1^U}-\lambda \to \lambda=\frac{1}{C_1^U}
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial C_2^U} = \frac{\beta}{C_2^U}-\frac{\lambda}{(1+r_1^U)} \to \lambda=\frac{\beta(1+r_1^U)}{C_2^U}
+\end{equation}
+Para $\lambda=\lambda$ temos a equação de Euler:
+\begin{equation}\label{eq:3aeuler}
+    C_2^U=\beta(1+r_1^U)C_1^U
+\end{equation}
+Substituindo portanto \eqref{eq:3aeuler} na R.O.I, e isolando $C_1^U$, temos:
+\begin{equation}
+    C_1^{U}+\frac{\beta(1+r_1^U)C_1^U}{(1+r_1^U)}=Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}
+\end{equation}
+\begin{equation}
+    (1+\beta)C_1^{U}=Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}
+\end{equation}
+Portanto, o consumo das famílias estado-unidense no primeiro período será:
+\begin{equation}
+    C_1^{U}=\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+Utilizando a equação de Euler, \eqref{eq:3aeuler} teremos que $C_2^U$ será:
+\begin{equation}
+    C_2^{U}=\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}\right]\frac{\beta(1+r_1^U)}{(1+\beta)}
+\end{equation}
+Da restrição no período um, podemos reescreve-la como:
+\begin{equation}
+    B_1^{U}=Q_1^{U}-C_1^{U}
+\end{equation}
+No ótimo:
+\begin{equation}
+    B_1^{U}=Q_1^{U}-\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+
+\subsection*{Ponto ii)}
+As famílias do resto do mundo tem preferências e restrições dadas por:
+    $$U^{R}=\ln C_1^R + \beta\ln C_2^R$$
+   $$C_1^{R}+B_1^{R}=Q_1^{R}$$
+   $$C_2^{R}=(1+r_1^R)B_1^{R}+Q_1^{R}$$
+   $$C_1^{R}+\frac{C_2^{R}}{(1+r_1^R)}=Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}$$
+O problema da família portanto se resume em:
+\begin{equation}
+    Max L = \ln C_1^R + \beta\ln C_2^R-\lambda\left[C_1^{R}+\frac{C_2^{R}}{(1+r_1^R)}-Q_1^{R}-\frac{Q_2^{R}}{(1+r_1^R)}\right]
+\end{equation}
+Condições de primeira ordem:
+\begin{equation}
+    \frac{\partial L}{\partial C_1^R} = \frac{1}{C_1^R}-\lambda \to \lambda=\frac{1}{C_1^R}
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial C_2^R} = \frac{\beta}{C_2^R}-\frac{\lambda}{(1+r_1^R)} \to \lambda=\frac{\beta(1+r_1^R)}{C_2^R}
+\end{equation}
+Para $\lambda=\lambda$ temos a equação de Euler:
+\begin{equation}\label{eq:3beuler}
+    C_2^R=\beta(1+r_1^R)C_1^R
+\end{equation}
+Substituindo portanto \eqref{eq:3beuler} na R.O.I, e isolando $C_1^R$, temos:
+\begin{equation}
+    C_1^{R}+\frac{\beta(1+r_1^R)C_1^R}{(1+r_1^R)}=Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}
+\end{equation}
+\begin{equation}
+    (1+\beta)C_1^{R}=Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}
+\end{equation}
+Portanto, o consumo das famílias do resto do mundo no primeiro período será:
+\begin{equation}
+    C_1^{R}=\left[Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+Utilizando a equação de Euler, \eqref{eq:3beuler} teremos que $C_2^R$ será:
+\begin{equation}
+    C_2^{R}=\left[Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}\right]\frac{\beta(1+r_1^R)}{(1+\beta)}
+\end{equation}
+Da restrição no período um, podemos reescreve-la como:
+\begin{equation}
+    B_1^{R}=Q_1^{R}-C_1^{R}
+\end{equation}
+No ótimo:
+\begin{equation}
+    B_1^{R}=Q_1^{R}-\left[Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+
+\subsection*{Ponto iii)}
+A livre mobilidade de capitais implica que $r_1^U=r*$. E, como não há posição líquida de ativos no período zero, $CA_1^U = TB_1^U = B_1^{U} = Q_1^U-C_1^U$, portanto:
+\begin{equation}\label{eq:33ca1}
+    CA_1^U = TB_1^U = B_1^{U} = Q_1^{U}-\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+Para o período dois, teremos que $B_2^U=0$ pela TVC, além do mais:
+\begin{equation}
+    TB_2^U = Q_2^U - C_2^U = Q_2^U - \left[Q_1^{U}+\frac{Q_2^{U}}{(1+r_1^U)}\right]\frac{\beta(1+r_1^U)}{(1+\beta)}
+\end{equation}
+Para a conta corrente:
+\begin{equation}
+    CA_2^U = B_2^U - B_1^U = -B_1^U = \left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}\right]\frac{1}{(1+\beta)}-Q_1^{U}
+\end{equation}
+
+\subsection*{Ponto iv)}
+A livre mobilidade de capitais implica que $r_1^R=r*$. Supondo que não há posição líquida de ativos no período zero, $CA_1^R = TB_1^R = B_1^{R} = Q_1^R-C_1^R$, portanto:
+\begin{equation}
+    CA_1^R = TB_1^R = B_1^{R} = Q_1^{R}-\left[Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+Para o período dois, teremos que $B_2^R=0$ pela TVC, além do mais:
+\begin{equation}
+    TB_2^R = Q_2^R - C_2^R = Q_2^R - \left[Q_1^{R}+\frac{Q_2^{R}}{(1+r_1^R)}\right]\frac{\beta(1+r_1^R)}{(1+\beta)}
+\end{equation}
+Para a conta corrente:
+\begin{equation}
+    CA_2^R = B_2^R - B_1^R = -B_1^R = \left[Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]\frac{1}{(1+\beta)}-Q_1^{R}
+\end{equation}
+
+\subsection*{Ponto v)}
+Sabemos que, "o recurso poupado por um país é a utilizado por outro país":
+\begin{equation}
+    CA_t^U+CA_t^R=0
+\end{equation}
+Portanto, para o período um, teremos:
+\begin{equation}\label{eq:3vca1}
+    Q_1^{U}-\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}\right]\frac{1}{(1+\beta)} +
+    Q_1^{R}-\left[Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]\frac{1}{(1+\beta)}=0
+\end{equation}
+\begin{equation}
+    Q_1^{U}+Q_1^{R}-\left[\frac{1}{1+\beta}\right] \left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}+Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]=0
+\end{equation}
+Consequentemente, para o período dois, teremos:
+\begin{equation}
+    \left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}\right]\frac{1}{(1+\beta)}-Q_1^{U}+
+    \left[Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]\frac{1}{(1+\beta)}-Q_1^{R}=0
+\end{equation}
+\begin{equation}
+    \left[\frac{1}{(1+\beta)}\right]\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}+Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]-Q_1^{U}-Q_1^{R}=0
+\end{equation}
+
+\subsection*{Ponto vi)}
+Partindo da equação \eqref{eq:3vca1}, isolando $r^*$, teremos em equilíbrio:
+\begin{equation}
+    Q_1^{U}+Q_1^{R}-\left[\frac{1}{1+\beta}\right] \left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}+Q_1^{R}+\frac{Q_2^{R}}{(1+r^*)}\right]=0
+\end{equation}
+\begin{equation}
+    \frac{(1+\beta)Q_1^U+(1+\beta)Q_1^R-Q_1^U-Q_1^R}{1+\beta}=
+    \left[\frac{1}{(1+\beta)(1+r^*)}\right] 
+    \left[Q_2^{U}+Q_2^{R}\right]
+\end{equation}
+\begin{equation}
+    (1+r^*)=
+    \frac{(1+\beta)}{\beta(Q_1^U+ Q_1^R)}
+    \left[\frac{1}{(1+\beta)}\right] 
+    \left[Q_2^{U}+Q_2^{R}\right]
+\end{equation}
+\begin{equation}
+    (1+r^*)=
+    \frac{Q_2^{U}+Q_2^{R}}{\beta(Q_1^U+Q_1^R)}
+\end{equation}
+Portanto a taxa de juros mundial de equilíbrio é de:
+\begin{equation}\label{eq:3r*star}
+    r^*=
+    \frac{Q_2^{U}+Q_2^{R}}{\beta(Q_1^U+Q_1^R)}-1
+\end{equation}
+Utilizando a equação \eqref{eq:3r*star} acima e isolando $\beta(1+r^*)$:
+\begin{equation}
+    (1+r^*)=
+    \frac{Q_2^{U}+Q_2^{R}}{\beta(Q_1^U+Q_1^R)}
+\end{equation}
+\begin{equation}
+    \beta(1+r^*)=
+    \frac{Q_2^{U}+Q_2^{R}}{Q_1^U+Q_1^R}
+\end{equation}
+Para que $\beta(1+r^*)=1$ as dotações mundiais ($Q_t^U+Q_t^R$) devem ser iguais.\\
+Pelas equações de Euler \eqref{eq:3aeuler} e \eqref{eq:3beuler} isso implica que o consumo será igual em ambos os períodos e países.
+
+\subsection*{Ponto vii)}
+Partindo da taxa de juros de equilíbrio \eqref{eq:3r*star}, e substituindo o efeito em $Q_1^i$:
+\begin{equation}
+    r^*=    \frac{Q_2^{U}+Q_2^{R}}{\beta(1+x)(Q_1^U+Q_1^R)}-1
+\end{equation}
+O efeito marginal do aumento em x na taxa de juros mundial de equilíbrio será conforme:
+\begin{equation}
+    \frac{\partial r^*}{\partial x}=-\frac{Q_2^{U}+Q_2^{R}}{\beta(1+x)^2(Q_1^U+Q_1^R)}<0
+\end{equation}
+Um aumento da dotação mundial do primeiro período levará a uma queda na taxa de juros mundial de equilíbrio.
+\begin{equation}
+    CA_1^U = (1+x)Q_1^{U}-\left[(1+x)Q_1^{U}+\frac{Q_2^{U}}{(1+r^{*New})}\right]\frac{1}{(1+\beta)}
+\end{equation}
+\begin{equation}
+    CA_1^U = Q_1^{U}-\left[Q_1^{U}+\frac{Q_2^{U}}{(1+r^*)}\right]\frac{1}{(1+\beta)}
+\end{equation}
+\begin{equation}
+    \Delta CA_1^U = \left[x Q_1^{U}-\frac{x Q_1^{U}}{(1+\beta)}\right]+\left[\frac{Q_2^{U}}{(1+r^*)}-\frac{Q_2^{U}}{(1+r^{*New})}\right]\frac{1}{(1+\beta)}
+\end{equation}
+A primeira parte da variação é positiva enquanto a segunda, negativa, ou seja:
+\begin{itemize}
+    \item Caso 1:\\
+    Se a variação da dotação corrente for maior do que a variação da dotação futura em valor presente, a conta corrente melhora, pois famílias dos EUA ofertam fundos.
+    \item Caso 2:\\
+    Se a variação da dotação corrente for igual a variação da dotação futura em valor presente, a conta corrente não se altera, ou seja, não há piora nem melhora.
+    \item Caso 3:\\
+    Se a variação da dotação corrente for menor a variação da dotação futura em valor presente, a conta corrente piora, pios famílias dos EUA demandam fundos.
+\end{itemize}
+
+
+\end{document}
