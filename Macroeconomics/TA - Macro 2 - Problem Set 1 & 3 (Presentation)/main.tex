@@ -1,0 +1,400 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage[portuguese]{babel}
+\usepackage {mathtools}
+\usepackage{utopia} %font utopia imported
+\usepackage{ragged2e}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{extarrows}
+\usepackage{booktabs}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+\usetheme{Boadilla}
+\usecolortheme{dolphin}
+
+
+% set colors
+\definecolor{myNewColorA}{RGB}{45, 75, 115}
+\definecolor{myNewColorB}{RGB}{37, 60, 89}
+\definecolor{myNewColorC}{RGB}{153, 180, 191}
+\definecolor{deepmagenta}{rgb}{0.8, 0.0, 0.8}
+
+%% I use a beige off white for my background
+%\definecolor{MyBackground}{RGB}{255,253,218}
+
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor{footline}{fg = white}%, bg = black}
+
+%% Uncomment this if you want to change the background color to something else
+%\setbeamercolor{background canvas}{bg=MyBackground}
+
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = {myNewColorB}
+}
+%------------------------------------------------------------
+\titlegraphic{\includegraphics[height=1.5cm]{UFPE.png}} 
+
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+\title[\textcolor{white}{Monitoria - Macro 2}]{Monitoria 1 - Macroeconomia 2}
+%\subtitle{ }
+\author[Silva]{Paulo Silva}
+
+\institute[UFPE]{Universidade Federal de Pernambuco}
+\date[\textcolor{white}{\today} ]
+{29 de julho de 2023}
+
+
+
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Conteúdo}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\justifying
+\section{Lista 1 - Questão 14}
+\begin{frame}{Questão 14}
+Suponha uma economia onde um indivíduo típico vive apenas 2 períodos. Este indivíduo maximiza uma função de utilidade $U(C_1, C_2) = C_1^{1/2}C_2^{1/2}$, onde $C_1$ representa o consumo no primeiro período e $C_2$ representa o consumo no segundo, $\beta$ é um parâmetro de preferência. A renda de cada indivíduo é uma dotação exógena e é dada por $Y_1$ no primeiro período e por $Y_2$ no segundo. O governo impõe impostos sobre o consumo no primeiro e segundo períodos, onde $\tau^c_1$ é alíquota sobre o consumo no primeiro período e $\tau^c_2$ é alíquota sobre o consumo no segundo período.\\
+O governo impõe ainda um imposto sobre a renda no primeiro período, $\tau^y_1$, e sobre a renda no segundo período, $\tau^y_2$. Finalmente, o governo transfere uma renda fixa para a família no valor de $T_1$ no primeiro período. O problema do indivíduo é escolher $C_1$, $C_2$ e poupança, $S_1$, para maximizar a utilidade sujeito à restrição orçamentária intertemporal.
+\end{frame}
+
+\subsection{Letra A)}
+\begin{frame}{Questão 14.A}
+\textbf{Letra A)} Monte o problema de otimização e determine as escolhas ótimas de consumo em cada período
+e a escolha de poupança ótima.
+\end{frame}
+
+\begin{frame}{Questão 14.A}
+Dado o enunciado, pode-se derivar a restrição orçamentária como:
+\begin{equation}\label{eq:14roi}
+    (1+\tau_1^c)C_1 + \frac{(1+\tau_2^c)C_2}{(1+r)} = (1 -\tau_1^y)Y_1 + T_1 + \frac{(1 - \tau_2^y)Y_2}{(1+r)}
+\end{equation}
+
+Além do mais, podemos linearizar a função utilidade das famílias:
+\begin{equation}
+    u = \frac{1}{2}ln C_1 + \frac{1}{2}ln C_2
+\end{equation}
+
+Tem-se portanto o seguinte lagrangiano:
+\begin{equation}
+    L = \frac{1}{2}ln C_1 + \frac{1}{2}ln C_2 - \lambda \left[(1+\tau_1^c)C_1 + \frac{(1+\tau_2^c)C_2}{(1+r)} - (1-\tau_1^y)Y_1 - T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)} \right]
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.A}
+Realizando as condições de primeira ordem:
+\begin{equation}
+    \frac{\partial L}{\partial C_1} = \frac{1}{2C_1} - \lambda(1+\tau_1^c) = 0 \to \lambda = \frac{1}{2(1+\tau_1^c)C_1}
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial C_2} = \frac{1}{2C_2} - \lambda \frac{(1+\tau_2^c)}{(1+r)} = 0 \to \lambda = \frac{(1+r)}{2(1+\tau_2^c)C_2}
+\end{equation}
+Igualando os lambdas tem-se:
+\begin{equation}
+    \frac{1}{2(1+\tau_1^c)C_1} = \frac{(1+r)}{2(1+\tau_2^c)C_2}
+\end{equation}
+\begin{equation}\label{eq:14ac2}
+    C_2 = \frac{(1+r)(1+\tau_1^c)C_1}{(1+\tau_2^c)}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.A}
+Substituindo $C_2$ \eqref{eq:14ac2} na ROI \eqref{eq:14roi} e isolando $C_1$ tem-se o consumo ótimo do primeiro período:
+\begin{equation}
+    (1+\tau_1^c)C_1 + \frac{(1+\tau_2^c)}{(1+r)}\frac{(1+r)(1+\tau_1^c)C_1}{(1+\tau_2^c)} = (1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}
+\end{equation}
+\begin{equation}
+    (1+\tau_1^c)C_1 + (1+\tau_1^c)C_1 = (1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}
+\end{equation}
+\begin{equation}
+    2(1+\tau_1^c)C_1 = (1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}
+\end{equation}
+\begin{equation}\label{eq:14ac1star}
+    C_1^* = \left[(1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}\right]\frac{1}{2(1+\tau_1^c)}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.A}
+Substituindo $C_1^*$ \eqref{eq:14ac1star} em \eqref{eq:14ac2}, $C_2$ consumo ótimo do segundo periodo será:
+\begin{equation}
+    C_2 = \frac{(1+r)(1+\tau_1^c)}{(1+\tau_2^c)}\left[(1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}\right]\frac{1}{2(1+\tau_1^c)}
+\end{equation}
+\begin{equation}\label{eq:14ac2star}
+    C_2^* = \frac{(1+r)}{2(1+\tau_2^c)}\left[(1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}\right]
+\end{equation}
+\\
+E por fim, a poupança ótima é determinada por:
+\begin{equation}
+    S_1^* = (1-\tau_1^y)Y_1 + T_1 - (1+\tau_1^c)C_1^*
+\end{equation}
+\begin{equation}
+    S_1^* = (1-\tau_1^y)Y_1 + T_1 - (1+\tau_1^c)\left[(1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}\right]\frac{1}{2(1+\tau_1^c)}
+\end{equation}
+\begin{equation}
+    S_1^* = \frac{1}{2}(1-\tau_1^y)Y_1 + \frac{T_1}{2} - \left[\frac{(1-\tau_2^y)Y_2}{(1+r)}\right]\frac{1}{2}
+\end{equation}
+\end{frame}
+
+\subsection{Letra B)}
+\begin{frame}{Questão 14.B}
+\textbf{Letra B)} O governo coleta impostos para financiar seus gastos, onde $G_1$ representa os gastos em $t=1$ e $G_2$ representa os gastos em $t=2$. O valor dos impostos também são usados para financiar a transferência de renda às famílias, $T_1$. O governo deve satisfazer sua Restrição Orçamentária Intertemporal (ROI), onde o Valor Presente Descontado dos gastos totais ($G_1$, $G_2$, $T_1$) do governo deve igualar o Valor Presente Descontado da receita com os impostos. Para esse problema assuma que $Y_1 = 3000$, $Y_2 = 1100$, $T_1 = 0$, $r = 10\%$, $\tau_1^y = \tau_2^y = 0,3$, $G_1 = 800$, $G_2 = 880$ e finalmente, $\tau_2^c = 0,2$. Determine o tamanho da alíquota sobre o consumo no primeiro período, $\tau_1^c$, para que o governo satisfaça sua ROI.
+\end{frame}
+
+\begin{frame}{Questão 14.B}
+Dado o enunciado, pod-se derivar a ROI do governo como:
+\begin{equation}
+    G_1+T_1+\frac{G_2}{(1+r)}=\tau_1^y Y_1 + \tau_1^c C_1 + \frac{\tau_2^y Y_2 + \tau_2^c C_2}{(1+r)}
+\end{equation}
+\\
+Substituindo os valores informados no enunciado na ROIG:
+\begin{equation}
+    800+T_1+\frac{880}{(1,1)}= 0.3 * 3000 + \tau_1^c C_1 + \frac{0.3 *1100 + 0.2 C_2}{(1,1)}
+\end{equation}
+\begin{equation}
+    1600+T_1= 900 + \tau_1^c C_1 + 300 +\frac{0.2*C_2}{(1,1)}
+\end{equation}
+\begin{equation}\label{eq:14bnot1}
+    400 +T_1 = \tau_1^c C_1 + \frac{0.2*C_2}{(1,1)}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.B}
+Da riqueza intertemporal com $T_1=0$ deriva-se que:
+\begin{equation}
+    We=\left[(1-\tau_1^y)Y_1 + T_1 + \frac{(1-\tau_2^y)Y_2}{(1+r)}\right]
+\end{equation}
+\begin{equation}
+    We=\left[(0.7)3000 + 0 + \frac{(0.7)1100}{(1,1)}\right] = 2800
+\end{equation}
+\\
+Substituindo valores em $C_2$, temos que o consumo ótimo futuro será:
+\begin{equation}
+    C_2^* = \frac{(1+r)}{2(1+\tau_2^c)}\left[We\right]
+\end{equation}
+\begin{equation}
+    C_2^* = \frac{(1,1)}{2(1,2)}\left[2800\right]=1283.33333333
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.B}
+Substituindo valores em $C_1$, consumo presente é:
+\begin{equation}
+    C_1^* = \left[We\right]\frac{1}{2(1+\tau_1^c)} = \frac{2800}{2(1+\tau_1^c)}=\frac{1400}{(1+\tau_1^c)}
+\end{equation}
+Substituindo o consumo em $t=\left\{1,2\right\}$ na ROIG \eqref{eq:14bnot1}:
+\begin{equation}
+    400 = \tau_1^c \frac{1400}{(1+\tau_1^c)} + \frac{0.2*1283.33333333}{(1,1)}
+\end{equation}
+\begin{equation}
+    400 = \tau_1^c \frac{1400}{(1+\tau_1^c)} + 233.33333333
+\end{equation}
+\begin{equation}
+    1400\tau_1^c = 166.66666667\tau_1^c + 166.66666667
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 14.B}
+A alíquota sobre o consumo do período 1 é determinada por:
+\begin{equation}
+    \tau_1^c = \frac{166.66666667}{1233.33333334} = 0.135135135
+\end{equation}
+Portanto, o consumo do primeiro período é dado por:
+\begin{equation}
+    C_1^*=\frac{1400}{(1+\tau_1^c)}=\frac{1400}{1.135135135}=1233.33333333
+\end{equation}
+\end{frame}
+
+\subsection{Letra C)}
+\begin{frame}{Questão 14.C}
+\textbf{Letra C)} Imagine agora que o Ministro Paulo Guedes lhe peça para realizar uma análise sobre uma proposta de implementação do Auxílio Brasil. A proposta consiste em transferir R\$100 para cada família, ou seja, $T'_1 = 100$. Ele quer saber qual deve ser o novo imposto sobre o consumo no primeiro período para que o governo continue satisfazendo sua ROI. Calcule os efeitos
+sobre o consumo no primeiro e segundo períodos dessa política, ou seja, $\Delta C_1 = C'_1 - C_1$ e $\Delta C_2 = C'_2 - C_2$, onde $C_1$ e $C_2$ são os níveis de consumo como na letra b e $C'_1$ e $C'_2$ são os níveis de consumo com a transferência de R\$ 100. Ele quer saber ainda se as famílias estarão em melhor situação com essa política. Sabendo que o nível de bem-estar das famílias é dado pelo valor da função de utilidade nas escolhas ótimas, qual o efeito dessa política sobre o bem-estar? O bem-estar aumentará, diminuirá ou permanecerá inalterado? Mostre quantitativamente o impacto.
+\end{frame}
+
+\begin{frame}{Questão 14.C}
+Com a transferência $T=100$, a ROIG e WE terão incremento de R\$100:
+\begin{equation}
+    500 = \tau_1^c C_1 + \frac{0.2*C_2}{(1,1)}
+\end{equation}
+\begin{equation}
+    We=\left[(0.7)3000 + 100 + \frac{(0.7)1100}{(1,1)}\right] = 2900
+\end{equation}
+Como na letra anterior, calcula-se consumo em t={1,2} e alíquota $\tau_1^c$, como resultado tem-se que:\\
+\vspace{10pt}
+$C'_2 = 1329.166667;$ $\tau'_1^c= 0.2167832168$, consequentemente $C'_1 = 1191.666667$
+\end{frame}
+
+\begin{frame}{Questão 14.C}
+    Quantitativamente com valores, teremos que a variação no consumo é de:
+\begin{equation}
+    \Delta C_1 = C_1' - C_1 \to \Delta C_1 = 1191.666667 - 1233.33333333 = -41.66666633
+\end{equation}
+\begin{equation}
+    \Delta C_2 = C_2' - C_2 \to \Delta C_2 =  1329.166667 - 1283.33333333 = 45.83333367    
+\end{equation}
+Já para a utilidade:
+\begin{equation}
+    U_b=\frac{1}{2}ln(1233.33333333) + \frac{1}{2}ln(1283.33333333) = 7.13734597429
+\end{equation}
+\begin{equation}
+    U_c=\frac{1}{2}ln(1191.666667) + \frac{1}{2}ln(1329.166667) = 7.13770781271
+\end{equation}
+A família suaviza o consumo de forma que parte da renda recebida é transferida do primeiro para o segundo período levando a uma melhora do bem-estar das famílias $(U_c > U_b)$.
+\end{frame}
+
+\section{Lista 3 - Questão 5}
+\begin{frame}{Questão 5}
+Suponha que as firmas atuam em concorrência monopolística, cada uma enfrentando uma
+curva de demanda da forma $y_i = P_i^{-\sigma}\frac{A^e}{N}$ onde $y_i$ é a demanda pelo produto da firma i, $P_i$ é o preço do produto da firma i, $\sigma$ é a elasticidade preço da demanda, $A^e$ é o valor esperado para a demanda agregada por parte das firmas $A^e = E[A_t]$, onde $E[·]$ é a esperança matemática. $N$ é o número de firmas nesta economia. Existem duas possibilidades para a demanda agregada (DA): $A^L$ é a DA quando ocorre uma recessão e $A^H$ quando ocorre uma expansão na economia, onde $A^L < A^H$. Seja $\theta$ a probabilidade de ocorrência da expansão, onde $0 \leq \theta \leq 1$. Suponha ainda que a função de produção nesta economia é tal que $y = ZK_t$, onde Z é um parâmetro que mede a Produtividade Total da Economia e $K_t$ é o estoque de capital em t. Assuma que o capital físico se deprecia à taxa $\delta$. O custo do investimento é dado por:\\
+C(I) = (1-\tau^k)P_I I+(1-\tau^k)P_I\beta\left(\frac{I}{I^*}\right)^2I^*$\\
+onde $P_I$ é o preço do investimento, $\beta$ é um parâmetro de custo, e $I^∗$ representa o nível de investimento ótimo da firma, que é tomado como exógeno pela firma no processo de otimização.E $\tau^k$ é um subsídio ao capital dado pelo governo. O governo ainda cobra um imposto, $\tau^Y$, sobre a receita da firma a cada momento no tempo.
+\end{frame}
+
+\subsection{Letra A)}
+\begin{frame}{Questão 5.A}
+\textbf{Letra A)}Monte o problema da firma e determine o estoque de capital ótimo da firma. Qual o efeito de um aumento em $\theta$ sobre o estoque de capital ótimo da firma? Qual a intuição?
+\end{frame}
+
+\begin{frame}{Questão 5.A}
+Do enunciado e definição de investimento pode-se escrever:
+\begin{equation}
+    K_t=I_t +(1-\delta)K_{t-1} \to \frac{\partial K_t}{\partial I_t}=1
+\end{equation}
+\begin{equation}
+    y_i=P_i^{-\sigma}\frac{A^{e}}{N}; \>\>\> \to  \>\>\> p_i=y_i^{\frac{-1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}    
+\end{equation}
+O problema da firma será maximizar seu lucro:
+\begin{equation}
+    \pi = (ZK_t)^{\frac{-1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}
+    ZK_t \frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I I-(1-\tau^k)P_I\beta\left(\frac{I}{I^*}\right)^2I^*
+\end{equation}
+Pode-se simplificar para:
+\begin{equation}
+    \pi = (Z)^{1-\frac{1}{\sigma}}(K_t)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I I-(1-\tau^k)P_I\beta\frac{I^2}{I^*}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 5.A}
+Realizando as condições de primeira ordem:
+\begin{equation}
+    \frac{\partial \pi}{\partial I} = \left[\frac{\sigma-1}{\sigma}\right] \frac{\partial K_t}{\partial I_t}\left(K_t\right)^{-\frac{1}{\sigma}}(Z)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I-(1-\tau^k)P_I\beta 2\frac{I^*}{I^*}=0
+\end{equation}
+\begin{equation}
+    \left[\frac{\sigma-1}{\sigma}\right] (K_t)^{-\frac{1}{\sigma}}(Z)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} = 2(1+\beta)(1-\tau^k)P_I
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 5.A}
+Isolando $K_t$ tem-se o estoque de capital ótimo:
+\begin{equation}
+    (K_t)^{-\frac{1}{\sigma}} = 2(1+\beta)(1-\tau^k)P_I\frac{(r+\delta)}{(1-\tau^Y)}\left[\frac{\sigma}{\sigma-1}\right]\left(\frac{N}{A^{e}}\right)^\frac{1}{\sigma}\frac{1}{(Z)^{\frac{\sigma-1}{\sigma}}} **^{(-\sigma)}
+\end{equation}
+\begin{equation}
+    K_t = \left[2(1+\beta)(1-\tau^k)P_I\frac{(r+\delta)}{(1-\tau^Y)}\left[\frac{\sigma}{\sigma-1}\right]\left(\frac{N}{A^{e}}\right)^\frac{1}{\sigma}\frac{1}{(Z)^{\frac{\sigma-1}{\sigma}}}\right]^{-\sigma}
+\end{equation}
+\begin{equation}
+    K_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A^{e}}{N}\right)
+\end{equation}
+\begin{equation}
+    K_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{\theta A_{t}^H+(1-\theta)A_{t}^L}{N}\right)
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 5.A}
+Sabendo que $A_t^H>A_t^L$ para um maior $\theta$ e $\sigma > 1$ (concorrência imperfeita) teremos que:
+\begin{equation}
+    \frac{\partial K_t}{\partial \theta}=\left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H-A_{t}^L}{N}\right) > 0
+\end{equation}
+Dada uma maior probabilidade de ocorrer uma expansão na economia ($\theta$ mais próximo de 1) e que firmas atuam na região elástica (devido a concorrência imperfeita $\sigma$ > 1 - pode-se obter maior receita com a redução da quantidade produzida e aumento de preço) o estoque de capital tende a aumentar para caso, indicador de um maior investimento.
+\end{frame}
+
+\subsection{Letra B)}
+\begin{frame}{Questão 5.B}
+\textbf{Letra B)} Suponha que em $t-1$ tenha ocorrido uma recessão, isto é $\theta = 0$. Determine nesta
+situação o estoque de capital ótimo em $t−1$. Suponha agora que ocorra uma expansão
+em t. Determine o volume de investimentos em t.
+\end{frame}
+
+\begin{frame}{Questão 5.B}
+    Para uma recessão $\theta=0$ em $t-1$, o estoque ótimo de capital será:
+\begin{equation}
+    K_{t-1}^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t-1}^L}{N}\right)
+\end{equation}
+Para uma expansão $\theta=1$ em $t$, o estoque de capital ótimo será:
+\begin{equation}
+    K_{t}^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H}{N}\right)
+\end{equation}
+\end{frame}
+
+\begin{frame}{Questão 5.B}
+Portanto, o investimento ótimo em $t$ será definido como:
+\begin{equation}
+\begin{split}
+    I_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H}{N}\right) -(1-\delta)\\
+    \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t-1}^L}{N}\right)
+\end{split}
+\end{equation}
+\begin{equation}
+    I_t^*=\left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{1}{N}\right)\left[A_{t}^H-(1-\delta)A_{t-1}^L\right]
+\end{equation}    
+\end{frame}
+
+\end{document}
+
+
+

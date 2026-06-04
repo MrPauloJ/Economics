@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath} %lets us use \begin{proof}
+%\usepackage[]{amssymb} %gives us the character \varnothing
+
+\title{Universidade Federal de Pernambuco \\
+Macroeconomia 1 - Lista 5}
+\author{Monitores: Ana Sofia; Heloísa Madureira; João Pedro; Paulo Francisco;}
+\date{30 de novembro de 2022}
+
+
+\begin{document}
+\maketitle
+\section*{Questão 1}
+Dados:
+$$U(C_1,C_2)=\ln C_1 +\ln C_2; \quad  (1+\tau_1)C_1+S_1 = Y_1-T_1; \quad (1+\tau_2)C_2=Y_2-T_2+(1+r)S_1; $$
+$$G_1 = T_1 + B_1 + \tau_1C_1; \quad G_2+(1+r)B_1=T_2+\tau_2C_2$$
+\subsection*{Letra A)}
+Isolando a poupança da $RO_2$:
+\begin{equation}
+    S_1= \frac{(1+\tau_2)C_2-Y_2+T_2}{(1+r)}
+\end{equation}
+E substituindo na $RO_1$ temos a $ROI$:
+\begin{equation}
+    (1+\tau_1)C_1+\frac{(1+\tau_2)C_2-Y_2+T_2}{(1+r)} = Y_1-T_1
+\end{equation}
+\begin{equation}
+    (1+\tau_1)C_1+\frac{(1+\tau_2)C_2}{(1+r)} = Y_1-T_1+\frac{Y_2-T_2}{(1+r)}
+\end{equation}
+Montando o lagrangiano e realizando as condições de primeira ordem:
+\begin{equation}
+    L = \ln C_1 +\ln C_2-\lambda\left[(1+\tau_1)C_1+\frac{(1+\tau_2)C_2}{(1+r)}-Y_1+T_1 -\frac{Y_2-T_2}{(1+r)}\right]
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial C_1} = \frac{1}{C_1}-\lambda(1+\tau_1)=0 \to \lambda=\frac{1}{(1+\tau_1)C_1}
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial C_2} = \frac{1}{C_2}-\frac{\lambda(1+\tau2)}{(1+r)}=0 \to \lambda=\frac{(1+r)}{(1+\tau_2)C_2}
+\end{equation}
+Igualando os lambdas $(\lambda=\lambda)$:
+\begin{equation}\label{eq:1aeqlambda}
+    \frac{1}{(1+\tau_1)C_1} = \frac{(1+r)}{(1+\tau_2)C_2} \to 
+    C_2^*=\frac{(1+r)(1+\tau_1)C_1^*}{(1+\tau_2)}
+\end{equation}
+Substituindo o resultado na ROI:
+\begin{equation}
+    (1+\tau_1)C_1+\frac{(1+\tau_2)}{(1+r)}\frac{(1+r)(1+\tau_1)C_1^*}{(1+\tau_2)} = Y_1-T_1+\frac{Y_2-T_2}{(1+r)}
+\end{equation}
+O consumo ótimo do primeiro período será:
+\begin{equation}
+    2(1+\tau_1)C_1^* = Y_1-T_1+\frac{Y_2-T_2}{(1+r)}
+\end{equation}
+\begin{equation}
+    C_1^* = \left[Y_1-T_1+\frac{Y_2-T_2}{(1+r)}\right]\frac{1}{2(1+\tau_1)}
+\end{equation}
+Da equação \eqref{eq:1aeqlambda}, substituindo $C_1$ para o segundo período portanto:
+\begin{equation}
+    C_2^*=\frac{(1+r)(1+\tau_1)}{(1+\tau_2)}\left[Y_1-T_1+\frac{Y_2-T_2}{(1+r)}\right]\frac{1}{2(1+\tau_1)}
+\end{equation}
+\begin{equation}
+    C_2^*=\frac{(1+r)}{2(1+\tau_2)}\left[Y_1-T_1+\frac{Y_2-T_2}{(1+r)}\right]
+\end{equation}
+\subsection*{Letra B)}
+Aplicando $\tau_1=\tau_2=0$ e montando a ROIG como:
+\begin{equation}
+    G_1 + \frac{G_2}{(1+r)} = T_1 + \frac{T_2}{(1+r)}
+\end{equation}
+Para uma redução de impostos $T_1'=T_1-\delta$, com $\Bar{T}=T_1=T_2=G_1=G_2$:
+\begin{equation}
+    \Bar{T} + \frac{\Bar{T}}{(1+r)} = \Bar{T}-\delta + \frac{T_2'}{(1+r)}
+\end{equation}
+Resolvendo para $T_2'$, teremos que o aumento dos impostos futuro será de:
+\begin{equation}
+    T_2'=\Bar{T}+\delta(1+r)
+\end{equation}
+Substituindo a alteração dos impostos na escolha ótima das famílias:
+\begin{equation}
+    C_1^* = \left[Y_1-\bar{T}+\delta+\frac{Y_2-\Bar{T}-\delta(1+r)}{(1+r)}\right]\frac{1}{2}
+\end{equation}
+\begin{equation}
+    C_1^* = \left[Y_1-\bar{T}+\frac{Y_2-\Bar{T}}{(1+r)}\right]\frac{1}{2}
+\end{equation}
+Lembre-se que $C_2^*=C_1^*(1+r)$ e que $\Bar{T}=T_1=T_2$, ou seja, a escolha ótima da família não se altera de forma que a equivalência ricardiana é observada.
+\subsection*{Letra C) (FAZER PROVA)}
+A ROIG do governo é escrita como:
+\begin{equation}
+    G_1 + \frac{G_2}{(1+r)}=T_1+\tau_1 C_1 + \frac{T_2+\tau_2 C_2}{(1+r)}
+\end{equation}
+\section*{Questão 3}
+A razão divida PIB pode ser escrita como:
+\begin{equation}
+    \frac{B_t}{Y_t} = (1+r-g)\frac{B_{t-1}}{Y_{t-1}}+\frac{G_t-T_t}{Y_t}
+\end{equation}
+Compreendendo os dados, temos que:
+$$r=0.03; \quad \frac{T-G}{Y_t}=0.04; \quad \frac{B_t}{Y_t}=0.45; \quad \frac{B_{t-1}}{Y_t}=0.5;$$
+\begin{equation}
+    0.45 = (1+0.03-g)0.5-0.04
+\end{equation}
+Resolvendo para $g$, o crescimento será de:
+\begin{equation}
+    \frac{0.49}{0.5}=1.03-g
+\end{equation}
+\begin{equation}
+    g=1.03-0.98=0.05; \quad g=5\%
+\end{equation}
+\section*{Questão 4)}
+Pela equação de Fisher, temos:
+\begin{equation}
+    r=i-\pi \to r = 0.08-0.04 \to r=0.04
+\end{equation}
+Para o cálculo da dívida-PIB temos:
+\begin{equation}
+    \frac{B_t}{Y_t} = (1+r-g)\frac{B_{t-1}}{Y_{t-1}}+\frac{G_t-T_t}{Y_t}
+\end{equation}
+Calculando com valores:
+\begin{equation}
+    \frac{B_1}{Y_1} = (1.01)1-0.02 = 99\%
+\end{equation}
+\begin{equation}
+    \frac{B_2}{Y_2} = (1.01)0.99-0.02 = 97.99\%
+\end{equation}
+\begin{equation}
+    \frac{B_3}{Y_3} = (1.01)0.9799-0.02 = 96.9699\%
+\end{equation}
+\begin{equation}
+    \frac{B_4}{Y_4} = (1.01)0.969699-0.02 = 95.939599\%
+\end{equation}
+\begin{equation}
+    \frac{B_5}{Y_5} = (1.01)0.95939599-0.02 = 94.89899499\%
+\end{equation}
+
+\end{document}

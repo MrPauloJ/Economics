@@ -1,0 +1,298 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath} %lets us use \begin{proof}
+%\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+
+\title{Universidade Federal de Pernambuco \\
+Macroeconomia 2 - Lista 3}
+\author{Monitor: Paulo Silva}
+\date{11 de novembro de 2022}
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+\section*{Questão 1)}
+Dados com $\delta=1$:
+$$y=K; \>\>\> 
+C(I)=P_I I-\frac{a}{2}P_I(K-K^*)^2;\>\>\>
+$$
+$$y_i=P_i^{-\eta}\frac{A}{N}; \>\>\> \to  \>\>\> p_i=y_i^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}$$
+\begin{equation}\label{eq:1capital}
+    I_t = K_t-(1-\delta)K_{t-1} \to I_t = K_t
+\end{equation}
+
+\subsection*{Letra A)}
+O problema da firma é maximizar seu lucro, portanto:
+\begin{equation}
+    \pi = y_i^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{y}{(\Bar{r}+\delta)} - P_I I+\frac{a}{2}P_I(K-K^*)^2
+\end{equation}
+\begin{equation}
+    \pi = K_t^{1-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(\Bar{r}+\delta)} - P_I K_t+\frac{a}{2}P_I(K_t-K_t^*)^2
+\end{equation}
+Teremos as seguintes C.P.O:
+\begin{equation}
+    \frac{\partial \pi}{\partial K_t} = \left(\frac{\eta -1}{\eta}\right)K_t^{-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(\Bar{r}+\delta)}-P_I+\frac{2a}{2}P_I (K_t^*-K^*_t)=0
+\end{equation}
+\begin{equation}
+    \left(\frac{\eta -1}{\eta}\right)K_t^{-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(\Bar{r}+\delta)}=P_I
+\end{equation}
+Isolando o estoque de capital físico e investimento ótimo $(K_t = I_t)$:
+\begin{equation}
+    K_t^{-\frac{1}{\eta}}=P_I(\Bar{r}+\delta)\left(\frac{\eta}{\eta -1}\right)\left(\frac{A}{N}\right)^\frac{-1}{\eta} **^{(-\eta)}
+\end{equation}
+\begin{equation}
+I_t^*=K_t^*=\left[\frac{1}{P_I(\Bar{r}+\delta)}\left(\frac{\eta -1}{\eta}\right)\right]^\eta\left(\frac{A}{N}\right)
+\end{equation}
+
+\subsection*{Letra B)}
+Sabemos que a demanda agregada é dada por:
+\begin{equation}
+    A_t = \Bar{A}+\beta_t r_t
+\end{equation}
+Logo a função de investimento e capital é dada por:
+\begin{equation}
+I_t^*=K_t^*=\left[\frac{1}{P_I(\Bar{r}+\delta)}\left(\frac{\eta -1}{\eta}\right)\right]^\eta \frac{1}{N} [\Bar{A}+\beta_t r_t]
+\end{equation}
+E portanto os efeitos de um aumento de 1\% na taxa de juros são:
+\begin{equation}
+    \frac{\partial A_t}{\partial r_t} = \beta_t < 0
+\end{equation}
+\begin{equation}
+    \frac{\partial I_t}{\partial r_t} = \frac{\partial K_t}{\partial r_t} =\left[\frac{1}{P_I(\Bar{r}+\delta)}\left(\frac{\eta -1}{\eta}\right)\right]^\eta \frac{1}{N} \frac{\partial A_t}{\partial r_t} < 0 
+\end{equation}
+Ou seja, um aumento da taxa de juros reduz a demanda agregada que portanto leva a redução do estoque de capital físico e investimento na mesma proporção.
+
+\section*{Questão 2}
+Dados com $\delta=1$:
+$$
+Y_t = 2AK_t^{1/2}; \>\>\> C(I) = P_I I_t + 2aP_I I_t^{1/2}
+$$
+$$ I_t = K_t - (1-\delta)K_{t-1} \to I_t = K_t$$
+O problema da firma será maximizar seu lucro:
+\begin{equation}
+    \pi = \frac{P}{(r+\delta)}2AI_t^{1/2} - P_I I_t - 2a P_I I_t^{1/2}
+\end{equation}
+Teremos as condições de primeira ordem:
+\begin{equation}
+    \frac{\partial \pi}{\partial I_t} = \frac{P}{(r+\delta)}AI_t^{-1/2} - P_I - a P_I I_t^{-1/2} = 0
+\end{equation}
+Isolando $I_t$ teremos o investimento ótimo:
+\begin{equation}
+    I_t^{-1/2}\left[\frac{P}{(r+\delta)}A - a P_I \right] = P_I 
+\end{equation}
+\begin{equation}
+    I_t^{-1/2} = P_I \left[\frac{P}{(r+\delta)}A - a P_I \right]^{-1} **^{-2}
+\end{equation}
+\begin{equation}
+    I_t^* = \frac{1}{P_I^2} \left[\frac{P}{(r+\delta)}A - a P_I \right]^{2}
+\end{equation}
+
+\subsection*{Letra B)}
+\begin{equation}
+    \frac{\partial I_t}{\partial A}=
+    2P_I^{-2} \left[\frac{P}{(r+\delta)}A - a P_I \right] \frac{P}{(r+\delta)}
+\end{equation}
+\begin{equation}
+    \frac{\partial I_t}{\partial A} > 0 \longleftrightarrow \left[\frac{P}{(r+\delta)}A - a P_I \right] > 0
+\end{equation}
+
+Ou seja, uma melhora tecnológica elevará o investimento quando o preço ajustado e descontado for maior que parte do custo de ajustamento.
+
+\section*{Questão 3}
+Dados:
+$$ y=K; \>\>\> C(I)=P_I(1+r)I+\frac{a}{2}P_I(1+r)\frac{I^2}{I^*}
+$$
+$$y_i=P_i^{-\eta}\frac{A}{N}; \>\>\> \to  \>\>\> p_i=y_i^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}$$
+$$I_t = K_t - (1-\delta)K_{t-1} \to K_t = I_t + (1-\delta)K_{t-1}$$
+\subsection*{Letra A)}
+O problema da firma é maximizar seu lucro:
+\begin{equation}
+    \pi = y_i^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta} \frac{y}{(r+\delta)} 
+    - P_I(1+r)I-\frac{a}{2}P_I(1+r)\frac{I^2}{I^*}
+\end{equation}
+\begin{equation}
+    \pi = K_t^{1-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta} \frac{1}{(r+\delta)} 
+    - P_I(1+r)I-\frac{a}{2}P_I(1+r)\frac{I^2}{I^*}
+\end{equation}
+
+Condições de primeira ordem:
+\begin{equation}
+    \frac{\partial \pi}{\partial I_t} = \frac{\partial K_t}{\partial I_t} \left(\frac{\eta-1}{\eta}\right)K_t^{-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(r+\delta)}-
+    P_I(1+r)-\frac{a}{2}P_I(1+r)2\frac{I^*}{I^*} = 0 
+\end{equation}
+\begin{equation}
+    \left(\frac{\eta-1}{\eta}\right)K_t^{-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(r+\delta)}=(1+a)(1+r)P_I
+\end{equation}
+Isolando $K_t$ teremos o estoque de capital ótimo:
+\begin{equation}
+    K_t^{-\frac{1}{\eta}}=(1-a)(1+r)(r+\delta)P_I\left(\frac{\eta-1}{\eta}\right)^{-1}\left(\frac{A}{N}\right)^\frac{-1}{\eta} **^{(-\eta)}
+\end{equation}
+\begin{equation}
+    K_t^*=\left[\frac{1}{(1+a)(1+r)(r+\delta)P_I} \left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_t}{N}\right)
+\end{equation}
+Portanto o investimento ótimo será definido como:
+\begin{equation}
+\begin{split}
+    I_t = \left[\frac{1}{(1+a)(1+r)(r+\delta)P_I} \left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_t}{N}\right) \\ - (1-\delta)\left[\frac{1}{(1+a)(1+r)(r+\delta)P_I} \left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_{t-1}}{N}\right)
+\end{split}
+\end{equation}
+\begin{equation}
+    I_t^* = \left[\frac{1}{(1+a)(1+r)(r+\delta)P_I} \left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{1}{N}\right)[A_t- (1-\delta)A_{t-1}]
+\end{equation}
+
+\subsection*{Letra B) (Fazer)}
+\begin{equation}
+K_t^*=\left[\frac{(r+\delta+r^2+r\delta)^-1}{(1+a)P_I} \left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_t}{N}\right)
+\end{equation}
+
+\section*{Questão 4}
+Do enunciado da questão sabemos que:
+$$A_t = A_W + \beta r; \>\>\> y=K; \>\>\>  C(I) = P_I I + \frac{a}{2}P_I \frac{I^2}{I^*}; \>\>\> I_t = K_t - (1-\delta)K_{t-1} $$
+Podemos reescrever $y_i$ para $P_i$, e $I$ para $K_t$, respectivamente:
+$$y_i=P_i^{-\eta}\frac{A}{N}; \>\>\> \to  \>\>\> p_i=y_i^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}$$
+\begin{equation}\label{eq:4capital}
+    K_t=I_t +(1-\delta)K_{t-1}
+\end{equation}
+\subsection*{Letra A)}
+Montando o problema das firmas e realizando C.P.O:
+\begin{equation}
+    \pi = \frac{p_i y}{(r+\delta)} - C(I)
+\end{equation}
+\begin{equation}
+    \pi = K^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta} K\frac{1}{(r+\delta)} - P_I I - \frac{a}{2}P_I \frac{I^2}{I^*}
+\end{equation}
+\begin{equation}
+    \pi = K^{1-\frac{1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(r+\delta)} - P_I I - \frac{a}{2}P_I \frac{I^2}{I^*}
+\end{equation}
+\begin{equation}
+    \frac{\partial \pi}{\partial I} = \frac{\partial K}{\partial I}
+    \left(\frac{\eta-1}{\eta}\right)K^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(r+\delta)}-P_I(1+a) = 0
+\end{equation}
+\\
+De \eqref{eq:4capital} sabemos que:
+\begin{equation}
+    \frac{\partial K_t}{\partial I_t} = 1
+\end{equation}
+\\
+Portanto, resolvendo para K, temos que o estoque de capital ótimo é:
+\begin{equation}
+    \left(\frac{\eta-1}{\eta}\right)K^{\frac{-1}{\eta}}\left(\frac{A}{N}\right)^\frac{1}{\eta}\frac{1}{(r+\delta)}=P_I(1+a)
+\end{equation}
+\begin{equation}
+    K^{\frac{-1}{\eta}}=P_I(1+a)\left(\frac{\eta}{\eta-1}\right)\left(\frac{A}{N}\right)^\frac{-1}{\eta}(r+\delta) \>\>\> *^{(-\eta)}
+\end{equation}
+\begin{equation}
+    K^*=\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A}{N}\right)
+\end{equation}
+\begin{equation}\label{eq:14ACapitalStar}
+    K^*=\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_W+\beta r}{N}\right)
+\end{equation}
+\\
+Substituindo na função investimento que varia com a demanda agregada:
+\begin{equation}
+    I_t^* =\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_t}{N}\right) - (1-\delta)\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_{t-1}}{N}\right)
+\end{equation}
+\begin{equation}
+    I_t^* =\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{1}{N}\right) \left[A_t -(1-\delta)A_{t-1}\right]
+\end{equation}
+\\
+Se a demanda mundial varia:
+\begin{equation}
+    I_t^* =\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{1}{N}\right) \left[(A_{W(t)}+\beta r) -(1-\delta)(A_{W(t-1)}+\beta r)\right]
+\end{equation}
+Sabemos que $\eta>0$ e $\beta<0$, portanto, para que o estoque de capital e o investimento sejam positivos, $K^*>0$ e $I^*>0$, temos duas condições:
+\begin{center}
+    $\left[(A_{W(t)}+\beta r) -(1-\delta)(A_{W(t-1)}+\beta r)\right] > 0$
+    \\ e $\eta>1 \to \left(\frac{\eta-1}{\eta}\right)>0$ \\
+    (Monopolistas operam na parte elastica da curva de demanda)
+\end{center}
+Com $A_W$ constante, $A_{W(t)}$=$A_{W(t-1)}=A_W$:
+\begin{equation}
+    I_t^* =\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_W + \beta r}{N}\right)\delta
+\end{equation}
+\begin{center}
+$\eta>1 \to \left(\frac{\eta-1}{\eta}\right)>0$ e $A_W > \beta r$
+\\
+ou
+\\
+$\eta<1 \to \left(\frac{\eta-1}{\eta}\right)<0$ e $A_W < \beta r$
+\end{center}
+\clearpage
+\subsection*{Letra B)}
+Lembremos que de \eqref{eq:14ACapitalStar}:
+\begin{equation}
+    K^*=\left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{A_W+\beta r}{N}\right)
+\end{equation}
+\\ Portanto, com $\eta>1$:
+\begin{equation}
+    \frac{\partial K^*}{\partial A_W} = \left[\frac{1}{P_I(1+a)(r+\delta)}\left(\frac{\eta-1}{\eta}\right)\right]^{\eta}\left(\frac{1}{N}\right) > 0
+\end{equation}
+Ou seja, na medida em que a demanda mundial por produtos nacionais aumenta, o estoque de capital ótimo também aumenta. Os efeitos são positivamente relacionados para quando $\eta>1$.
+\section*{Questão 5)}
+Do enunciado temos:
+$$y=ZK_t; \>\>\> C(I) = (1-\tau^k)P_I I+(1-\tau^k)P_I\beta\left(\frac{I}{I^*}\right)^2I^*$$
+Podemos ainda escrever o preço e capital como:
+$$K_t=I_t +(1-\delta)K_{t-1} \to \frac{\partial K_t}{\partial I_t}=1$$
+$$y_i=P_i^{-\sigma}\frac{A^{e}}{N}; \>\>\> \to  \>\>\> p_i=y_i^{\frac{-1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}$$
+\subsection*{Letra A)}
+O problema da firma será maximizar seu lucro:
+\begin{equation}
+    \pi = (ZK_t)^{\frac{-1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}
+    ZK_t \frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I I-(1-\tau^k)P_I\beta\left(\frac{I}{I^*}\right)^2I^*
+\end{equation}
+Podemos simplificar para:
+\begin{equation}
+    \pi = (Z)^{1-\frac{1}{\sigma}}(K_t)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I I-(1-\tau^k)P_I\beta\frac{I^2}{I^*}
+\end{equation}
+Realizando as condições de primeira ordem:
+\begin{equation}
+    \frac{\partial \pi}{\partial I} = \left[\frac{\sigma-1}{\sigma}\right] \frac{\partial K_t}{\partial I_t}\left(K_t\right)^{-\frac{1}{\sigma}}(Z)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} - (1-\tau^k)P_I-(1-\tau^k)P_I\beta 2\frac{I^*}{I^*}=0
+\end{equation}
+\begin{equation}
+    \left[\frac{\sigma-1}{\sigma}\right] (K_t)^{-\frac{1}{\sigma}}(Z)^{1-\frac{1}{\sigma}}\left(\frac{A^{e}}{N}\right)^\frac{1}{\sigma}\frac{(1-\tau^Y)}{(r+\delta)} = 2(1+\beta)(1-\tau^k)P_I
+\end{equation}
+Isolando $K_t$ teremos o estoque de capital ótimo:
+\begin{equation}
+    (K_t)^{-\frac{1}{\sigma}} = 2(1+\beta)(1-\tau^k)P_I\frac{(r+\delta)}{(1-\tau^Y)}\left[\frac{\sigma}{\sigma-1}\right]\left(\frac{N}{A^{e}}\right)^\frac{1}{\sigma}\frac{1}{(Z)^{\frac{\sigma-1}{\sigma}}} **^{(-\sigma)}
+\end{equation}
+\begin{equation}
+    K_t = \left[2(1+\beta)(1-\tau^k)P_I\frac{(r+\delta)}{(1-\tau^Y)}\left[\frac{\sigma}{\sigma-1}\right]\left(\frac{N}{A^{e}}\right)^\frac{1}{\sigma}\frac{1}{(Z)^{\frac{\sigma-1}{\sigma}}}\right]^{-\sigma}
+\end{equation}
+\begin{equation}
+    K_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A^{e}}{N}\right)
+\end{equation}
+\begin{equation}
+    K_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{\theta A_{t}^H+(1-\theta)A_{t}^L}{N}\right)
+\end{equation}
+Sabendo que $A_t^H>A_t^L$ teremos que:
+\begin{equation}
+    \frac{\partial K_t}{\partial \theta}=\left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H-A_{t}^L}{N}\right) > 0
+\end{equation}
+Portanto, quanto maior for a probabilidade da ocorrência de expansão da economia, maior será o estoque de capital ótimo na mesma.
+\subsection*{Letra B)}
+Para uma recessão $\theta=0$ em $t-1$, o estoque ótimo de capital será:
+\begin{equation}
+    K_{t-1}^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t-1}^L}{N}\right)
+\end{equation}
+Para uma expansão $\theta=1$ em $t$, o estoque de capital ótimo será:
+\begin{equation}
+    K_{t}^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H}{N}\right)
+\end{equation}
+Portanto, o investimento ótimo em $t$ será definido como:
+\begin{equation}
+\begin{split}
+    I_t^* = \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t}^H}{N}\right) -(1-\delta)\\
+    \left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{A_{t-1}^L}{N}\right)
+\end{split}
+\end{equation}
+\begin{equation}
+    I_t^*=\left[\frac{(1-\tau^Y)}{2(1+\beta)(1-\tau^k)P_I(r+\delta)}\left[\frac{\sigma-1}{\sigma}\right]\right]^{\sigma}Z^{(1-\sigma)}\left(\frac{1}{N}\right)\left[A_{t}^H-(1-\delta)A_{t-1}^L\right]
+\end{equation}
+
+\end{document}
